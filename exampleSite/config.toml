@@ -198,6 +198,17 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     n-gitlab = "http://localhost:1313"
     o-bilibili = "http://localhost:1313"
 
+  # Beian ICP and gongan information for Chinese users. See: http://www.beian.miit.gov.cn, http://www.beian.gov.cn
+  [params.beian]
+    enable = true
+    icp = "_ICP备________号-_"
+    # The digit in the num of gongan beian.
+    gongan_id = "______________"
+    # The full num of gongan beian.
+    gongan_num = "_公网安备______________号"
+    # The icon for gongan beian. See: http://www.beian.gov.cn/portal/download
+    gongan_icon_url = "/path/to/beian_icon.png"
+
 # See https://gohugo.io/about/hugo-and-gdpr/
 [privacy]
   [privacy.googleAnalytics]

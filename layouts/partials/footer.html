@@ -12,6 +12,15 @@
   {{- end }}
 </div>
 
+{{ if .Site.Params.beian.enable -}}
+<div style="color: #8a8a8a; font-size: 16px; font-weight: 400; text-align: center; line-height: 1.5; margin: 10px 0 0;">
+    <a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">{{ .Site.Params.beian.icp }} </a>
+    <img src="{{ .Site.Params.beian.gongan_icon_url }}" style="display: inline-block;">
+  {{ $gonganURL := printf `http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=%s` .Site.Params.beian.gongan_id -}}
+    <a href="{{ $gonganURL }}" rel="noopener" target="_blank">{{ .Site.Params.beian.gongan_num }} </a>
+</div>
+{{- end }}
+
 <div class="copyright">
   <span class="power-by">
     {{ (printf (T "powered") `<a class="hexo-link" href="https://gohugo.io">Hugo</a>`) | safeHTML }}
