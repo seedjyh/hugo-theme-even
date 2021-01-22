@@ -5,6 +5,11 @@
     {{- else -}}
       {{ .Site.Title }}
     {{- end -}}
+    {{ with .Site.Params.description  }}
+      <h2 style="font-size: 1rem; font-weight: 100; font-family: avenir next,avenir,sans-serif; line-height: 1.15;">
+        {{ . }}
+      </h2>
+    {{ end }}
   </a>
 </div>
 
